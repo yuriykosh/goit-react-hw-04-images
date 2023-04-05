@@ -8,8 +8,9 @@ export const App = () => {
   const [query, setQuery] = useState("");
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
-  const [showBtn, setShowBtn] = (false);
-  const [largeImageURL, setLargeImageURL] = useEffect("");
+  const [showBtn, setShowBtn] = useState(false);
+  const [largeImageURL, setLargeImageURL] = useState("");
+  
   useEffect(() => {
     if (!query) {
       return
