@@ -10,7 +10,7 @@ export const App = () => {
   const [page, setPage] = useState(1);
   const [showBtn, setShowBtn] = useState(false);
   const [largeImageURL, setLargeImageURL] = useState("");
-  
+
   useEffect(() => {
     if (!query) {
       return
@@ -20,7 +20,7 @@ export const App = () => {
         alert("We didn't find any photos")
         return 
       }
-      setImages(prevState => [...prevState, ...data.totalHits]);
+      setImages(prevState => [...prevState, ...data.hits]);
       setShowBtn(page < Math.ceil(data.totalHits/12))
       
     })
